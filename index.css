@@ -270,3 +270,155 @@
     
     background: #1d7fbb;
 }
+
+
+@keyframes moveLtR {
+    from {
+        left: -200px;
+    }
+    to {
+        left: 800px;
+    }
+}
+@keyframes moveRtL {
+    from {
+        right: -100px;
+    }
+    to {
+        right: 700px;
+    }
+}
+@keyframes moveSmokeUp {
+    from {
+        top: -25px;
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+    to {
+        top: -60px;
+        transform: scale(4, 4);
+        opacity: .2;
+    }
+}
+@keyframes sunGoing {
+    from {
+        transform:rotate(-70deg);
+    }
+    30% {
+        transform:rotate(110deg);
+    }
+    to {
+        transform:rotate(230deg);
+    }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes timeOfTheDay {
+    from {
+        /* Да будет День! */
+        background: skyblue;
+        box-shadow: 0 -400px 300px -300px steelblue inset;
+    }
+    33%{
+        /* Утро/Вечер */
+        background: darkslateblue;
+        box-shadow: 0 -400px 300px -300px orangered inset;
+    }
+    66% {
+        /* Да будет Ночь! */
+        background: darkslateblue;
+        box-shadow: 0 -400px 300px -300px transparent inset;
+    }
+    to {
+        /* Да будет СНОВА День! */
+        background: skyblue;
+        box-shadow: 0 -400px 300px -300px steelblue inset;
+    }
+}
+
+.cloud-1 {
+    animation: moveLtR  40s infinite linear 5s;
+    transform: scale(-0.25, 0.25);
+}
+.cloud-2 {
+    animation: moveLtR  30s infinite linear;
+    transform: scale(0.4, 0.4);
+}
+.cloud-3 {
+    animation: moveLtR  13s infinite linear 22s;
+    transform: scale(-0.7, 0.7);
+}
+.cloud-4 {
+    animation: moveLtR  20s infinite linear;
+}
+
+.ship {
+    animation: moveRtL 60s infinite linear;
+}
+
+.smoke-1{
+    animation: moveSmokeUp  2s infinite linear;
+}
+.smoke-2{
+    animation: moveSmokeUp  2s infinite linear 0.7s;
+}
+.smoke-3{
+    animation: moveSmokeUp  2s infinite linear 1.4s;
+}
+
+.sun {
+    transform-origin: 100px 400px;
+    animation: sunGoing  90s infinite linear;
+}
+
+.sun div {
+    animation: spin 10s infinite linear 2.5s;
+}
+.sun div:nth-child(2) {
+    animation: spin 10s infinite linear 3s;
+}
+
+.sun div:nth-child(3) {
+    animation: spin 10s infinite linear 3.5s;
+}
+
+.sun div:nth-child(4) {
+    animation: spin 10s infinite linear 4s;
+}
+
+.sun div:nth-child(5) {
+    animation: spin 10s infinite linear 4.5s;
+}
+
+.sun div:nth-child(6) {
+    animation: spin 10s infinite linear;
+}
+
+.sun div:nth-child(7) {
+    animation: spin 10s infinite linear 0.5s;
+}
+
+.sun div:nth-child(8) {
+    animation: spin 10s infinite linear 1s;
+}
+
+.sun div:nth-child(9) {
+    animation: spin 10s infinite linear 1.5s;
+}
+
+.sun div:nth-child(10) {
+    animation: spin 10s infinite linear 2s;
+}
+
+
+
+.box_front {
+    animation: timeOfTheDay  90s infinite linear;
+}
